@@ -1,12 +1,17 @@
 package com.sand.dao;
 
+import java.util.logging.Logger;
+
 import org.springframework.stereotype.Component;
 
 @Component
 public class MembershipDAO
 {
-  public boolean addMemberAccount(String name) {
-    System.out.println(getClass() + ": Adding a MEMBERSHIP ACCOUNT");
+  private static Logger logger = Logger.getLogger(MembershipDAO.class.getName());
+  
+  public boolean addMemberAccount(String name)
+  {
+    logger.info(getClass() + ": Adding a MEMBERSHIP ACCOUNT");
     return true;
   }
 }
