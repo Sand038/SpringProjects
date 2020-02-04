@@ -12,7 +12,10 @@
 <div class="container">
 	<h3>Employee Directory</h3>
 	<hr>
-	<p class="h4 mb-4">Save Employee</p>
+	<p class="h4 mb-4">
+		Save Employee
+		<a th:href="@{/logout}" class="btn btn-primary float-right btn-sm mb-3">Logout</a>
+	</p>
 	<form action="#" th:action="@{/employees/save}" th:object="${employee}" method="post">
 		<input type="hidden" th:field="*{id}">
 		<input type="text" th:field="*{firstName}" class="form-control mb-4 col-4" placeholder="First Name">
